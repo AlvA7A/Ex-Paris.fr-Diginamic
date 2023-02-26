@@ -1,0 +1,17 @@
+$light: rgb(242, 242, 242);
+$danger: rgb(221, 49, 78);
+$primary: rgb(81, 102, 221);
+$lightgrey: rgb(230, 230, 230);
+$lessLightgrey: rgb(218, 218, 218);
+$bleunuit: rgb(6, 32, 56);
+$vide: rgba(255, 255, 255, 0);
+$grey: rgb(150, 150, 150);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 800px,
+  lg: 1000px,
+  xl: 1140px,
+  xxl: 1700px
+)

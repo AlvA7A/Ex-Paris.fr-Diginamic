@@ -1,0 +1,43 @@
+@mixin fontelloNavBar ($bg-icon, $iconColor) {
+    padding: 14px 9px 11px 9px;
+    background-color: $bg-icon;
+    border-radius: 26px;
+    transition:all 0.2s ease;
+
+    &:before {
+      font-size: 26px;
+      color: $iconColor;
+    }
+}
+
+
+@mixin titreArticle($bg-color, $top, $left) {
+    position: absolute;
+    top: $top;
+    left: $left;
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    background-color: $bg-color;
+    padding: 10px 16px;
+}
+
+@mixin lienRouge($wit, $margtop, $spacing, $size) {
+  width: $wit;
+  font-size: $size;
+  letter-spacing: $spacing;
+  font-weight: 600;
+  color: $danger;
+  text-decoration: none;
+  padding: 8px 5px;
+  margin-top: $margtop;
+  background: linear-gradient(to left, $vide 50%, $danger 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition: all 0.3s;
+
+  &:hover {
+    color: white;
+    background-position:left bottom;
+  }
+}

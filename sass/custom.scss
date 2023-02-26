@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Montserrat !important;
+}
+
+.header {
+  width: 100%;
+  border-bottom: 2px solid $lightgrey;
+  position:fixed;
+  overflow: hidden; 
+  top: 0;
+  background-color: white;
+  z-index: 100;
+
+  svg {
+    cursor: pointer;
+  }
+}
+
+.icon-menu {
+  margin: 0 10px;
+
+  &:before {
+    font-size: 23px;
+  }
+}
+
+main {
+  margin-top: 80px;
+
+  nav{
+    h2 {
+      font-size: 18px;
+      font-weight: 700;
+      margin-top: 30px;
+    }
+  }
+}
+
+#nav-row {
+  border-bottom: 1px solid $vide;
+  margin-bottom: 1px;
+  a {
+    padding: 10px 0;
+    text-decoration: none;
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 700;
+    
+    &:hover {
+      color: none;
+      border: none;
+    }
+    
+    &:focus-within {
+      color: $bleunuit;
+      border-bottom: 2px solid $bleunuit;
+    }
+    --bs-nav-tabs-border-width: 2px;
+    --bs-nav-tabs-link-active-color: rgb(6, 32, 56);
+    --bs-nav-link-color: rgb(167, 167, 167);
+    --bs-nav-tabs-link-active-bg: #ffffff;
+    --bs-nav-tabs-link-active-border-color: rgb(6, 32, 56);
+    --bs-nav-link-hover-color: none;
+    border-top: var(--bs-nav-tabs-link-active-border-color) solid $bleunuit;
+    border-right: var(--bs-nav-tabs-link-active-border-color) solid $bleunuit;
+    border-left: var(--bs-nav-tabs-link-active-border-color) solid $bleunuit;
+  }
+}
+
+.container-acces {
+  width: 90%;
+}
+
+.button-acces {
+  padding: 5px 12px 10px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: $light;
+  margin: 4px 4px;
+
+  &:hover {
+    .icon-location:before {
+      color: lighten($color: $primary, $amount: 20%);
+    }
+    .text-acces {
+      color: black;
+    }
+  }
+}
+
+.icon-location:before {
+font-size: 20px;
+transform: translateY(+3px);
+color: $primary;
+}
+
+.text-acces {
+  font-size: 10px;
+  font-weight: 700;
+  text-decoration: none;
+  color: black;
+  white-space: nowrap;
+}
+
+.text-carte {
+  @include lienRouge(120px, 12px, 2px, 10px)
+}
+
+main {
+  nav {
+    margin-bottom: 100px;
+  }
+}
+
+.cont-vert-nav {
+  width: 92%;
+  padding: 0;
+  margin-top: 20px;
+
+}
+
+.transi-border {
+  position: absolute;
+  background-color: $bleunuit;
+  top: -2px;
+  left: 0;
+  width: 0px;
+  height: 2px;
+  transition: all 0.2s ease;
+}
+
+.card-vert-nav {
+  position: relative;
+  height: 90px;
+  width: 100%;
+  border-top: 2px solid $light;
+  margin-left: 20px;
+  cursor: pointer;
+
+  &:hover {
+    .transi-border {
+      width: 100%;
+    }
+    .icon-id-card-o {
+      @include fontelloNavBar($bleunuit, $light);
+    }
+    .icon-briefcase {
+      @include fontelloNavBar($bleunuit, $light);
+    }
+    .icon-trash {
+      @include fontelloNavBar($bleunuit, $light);
+    }
+    .icon-cab {
+      @include fontelloNavBar($bleunuit, $light);
+    }
+    
+    .icon-mobile {
+      @include fontelloNavBar($bleunuit, $light);
+    }
+    .icon-child {
+      @include fontelloNavBar($bleunuit, $light);
+    }
+  }
+}
+
+.icon-id-card-o {
+  @include fontelloNavBar($light, $bleunuit);
+  }
+
+.text-vert-nav {
+  text-decoration: none;
+  color: $dark;
+  font-size: 15px;
+  margin-left: 18px;
+
+  &:hover {
+    color: $dark;
+  }
+}
+
+.icon-briefcase {
+  @include fontelloNavBar($light, $bleunuit);
+}
+
+.icon-trash {
+  @include fontelloNavBar($light, $bleunuit);
+}
+
+.icon-cab {
+  @include fontelloNavBar($light, $bleunuit);
+}
+
+.icon-mobile {
+  @include fontelloNavBar($light, $bleunuit);
+}
+
+.icon-child {
+  @include fontelloNavBar($light, $bleunuit);
+}
+
+.cont-part-middle {
+  margin-bottom: 100px;
+}
+
+.cont-img-01 {
+  width: 100%;
+  cursor: pointer;
+}
+
+.img-01 {
+  width: 100%;
+}
+
+.article-01 {
+  h3{
+    @include titreArticle($danger, -16px, 40px);
+  }
+}
+
+.card-article-01 {
+  width: 95%;
+  background-color: white;
+  transform: translateY(-60px);
+  padding: 22px 30px;
+  cursor: pointer;
+
+  h2 {
+    font-weight: 900;
+    margin-bottom: 12px;
+    hyphens: auto;
+  }
+
+  p {
+    font-size: 15px;
+    line-height: 26px;
+  }
+
+}
+
+.cont-articles-02-03 {
+  width: 100%;
+}
+
+.card-article-02 {
+  width: 40%;
+  cursor: pointer;
+
+  img {
+    width: 100%;
+  }
+}
+
+.cont-relat {
+position: relative;
+
+  h3 {
+    @include titreArticle($primary, -42px, 10px);
+  }
+
+  h2 {
+    font-size: 18px;
+    font-weight: 800;
+    margin-top: 25px;
+    margin-left: 8px;
+    line-height: 25px;
+  }
+}
+
+.container-right-part {
+  width: 100%;
+
+  article {
+    border-bottom: 1px solid $lightgrey;
+  }
+}
+
+.article-col-left {
+  width: 80px;
+  margin-top: 15px;
+
+  h2 {
+    margin-left: 22px;
+    margin-bottom: -4px;
+    font-weight: 600;
+    font-size: 27px;
+  }
+
+  span {
+    margin-left: 25px;
+
+    &:before {
+      font-size: 16px;
+      color: $danger;
+      margin-top: 10px;
+    }
+  }
+
+  div {
+    height: 77%;
+    border-right: 1px solid $danger;
+    width: 36px;
+    margin-top: -5px;
+  }
+}
+
+.article-col-right {
+  margin-top: 15px;
+  padding-right: 30px;
+  flex: 1;
+
+  p {
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+
+  span {
+    font-weight: 700;
+  }
+
+  a {
+    @include lienRouge(120px, 0px, 2px, 10px);
+    margin-left: -5px;
+  }
+
+  img {
+    width: 100%;
+    padding: 20px 0;
+  }
+}
+
+footer {
+  svg {
+    width: 140px;
+    margin: 50px 0 20px 0;
+  }
+}
+
+.first-foot {
+  background-color: $lightgrey;
+
+  button {
+    background-color: $lessLightgrey;
+    border: none;
+    border-radius: 0;
+    color: black;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0px 30px 16px 30px;
+
+    &:after {
+      content : '\f107';
+      font-family: fontello;
+      border: none;
+      color: $danger;
+      font-size: 26px;
+      margin-left: 120px;
+      transform: translateY(+10px);
+    }
+  }
+}
+
+.cont-3col-foot {
+  margin-top: 30px;
+  width: 100%;
+  max-width: 700px;
+  margin-bottom: 50px;
+  & a:nth-child(even) {
+    @include lienRouge(120px, 0px, 0px, 10px);
+    text-align: center;
+  }
+
+  & a:nth-child(odd) {
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+}
+.cols-foot {
+  padding: 0 20px;
+}
+
+.border-truc {
+  border-right: 2px solid $lessLightgrey;
+}
+
+.second-foot {
+  background-color: $bleunuit;
+  width: 100%;
+  align-items: center;
+
+  p:nth-child(1) {
+    color: white;
+    font-size: 13px;
+    margin-top: 26px;
+  }
+
+  div {
+    width: 90%;
+    max-width: 500px;
+  }
+
+  input {
+    border-radius: 0;
+    height: 44px;
+    width: 100%;
+    font-size: 13px;
+  }
+
+  label {
+    @include visually-hidden();
+  }
+
+  nav {
+    margin-bottom: 20px;
+  }
+}
+
+.cont-cont-second-foot {
+  width: 100%;
+  margin: 0 20px;
+}
+
+.button-abo {
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  width: 100px;
+  border: none;
+  border-radius: 0;
+  padding: 12px 16px 13px 16px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  background: linear-gradient(to left, $danger 50%, white 50%);
+  background-size: 200% 100%;
+  background-position:right bottom;
+  transition: all 0.3s;
+  &:hover {
+    color: $danger;
+    background-position:left bottom;
+  }
+}
+
+.para-sec-foot {
+  color: white;
+  font-size: 13px;
+}
+
+.icon-facebook-official,
+.icon-twitter,
+.icon-instagram,
+.icon-linkedin,
+.icon-youtube-play {
+  color: white;
+  text-decoration: none;
+  padding: 0;
+  font-size: 20px;
+  transition: all 0.2s ease;
+
+  &:hover {
+    color: $danger;
+  }
+}
+
+.button-jecoute {
+  @include lienRouge(150px ,0px, 0px, 14px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.para2-sec-foot {
+  color: white;
+  font-size: 13px;
+  margin-bottom: 5px;
+}
+
+.cont-abo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-bar-foot {
+  width: 100%;
+  margin-top: 20px;
+  margin-bottom: 8px;
+
+  a {
+    text-decoration: none;
+    color: $bleunuit;
+    font-size: 10px;
+    letter-spacing: 1px;
+    margin: 7px 10px;
+    font-weight: 700;
+    transition: all 0.2s ease;
+
+    &:hover {
+      color: $danger;
+    }
+  }
+}
+
+
+
+
+
+  
+
